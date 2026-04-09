@@ -32,8 +32,9 @@ function Register() {
             }, 1000);
 
         } catch (err) {
-            setError("Registration failed ❌");
-        }
+    console.log(err.response?.data); // 🔥 ADD THIS
+    setError(JSON.stringify(err.response?.data));
+}
     };
 
     return (

@@ -129,7 +129,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # add
 MEDIA_URL = "/media/"  # add
 MEDIA_ROOT = BASE_DIR / "media"  # add
 
-CORS_ALLOW_ALL_ORIGINS = True # add
+CORS_ALLOWED_ORIGINS = [
+    "https://eva-2-ai-chat-module-with-history.vercel.app",
+    "https://*.vercel.app",
+] # add
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
